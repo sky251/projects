@@ -1,0 +1,27 @@
+<odoo noupdate="1">
+
+    <record model="product.certification" id="product_certification_1">
+        <field name="name">BIO</field>
+    </record>
+
+    <record model="product.certification" id="product_certification_2">
+        <field name="name">NOP</field>
+    </record>
+
+    <record model="product.certification" id="product_certification_3">
+        <field name="name">FEED</field>
+    </record>
+
+    <record model="product.certification" id="product_certification_4">
+        <field name="name">FOOD</field>
+    </record>
+
+    <record model="product.certification" id="product_certification_5">
+        <field name="name">KOSHER</field>
+    </record>
+
+    <record model="product.certification" id="product_certification_6">
+        <field name="name">REACH</field>
+    </record>
+
+</odoo>

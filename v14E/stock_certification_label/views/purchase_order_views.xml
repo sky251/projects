@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="purchase_order_certification_form_view" model="ir.ui.view">
+    <field name="name">purchase.order.certification.form.view</field>
+    <field name="model">purchase.order</field>
+    <field name="inherit_id" ref="purchase.purchase_order_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='order_line']//tree" position="attributes">
+        <attribute name="editable"/>
+      </xpath>
+      <xpath expr="//field[@name='order_line']//form//field[@name='date_planned']" position="after">
+        <field name="certification_ids">
+          <tree create="1" editable="bottom">
+            <field name="purchase_certification_ids" invisible="1"/>
+            <field name="certification_id" required="1" domain="[('id', 'in', purchase_certification_ids)]"/>
+            <field name="is_active"/>
+          </tree>
+        </field>
+      </xpath>
+    </field>
+  </record>
+
+</odoo>

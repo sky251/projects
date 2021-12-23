@@ -1,0 +1,333 @@
+<odoo>
+    <template id="custom_certification_css_50">
+        <style>
+            img{
+            height:26.66px;
+            margin: auto;
+            width:20px;
+            }
+            div{
+            padding:0px;
+            margin-left:0px;
+            }
+            span{
+            font-size:4.66px;
+            }
+            p{
+            font-size:4.66px;
+            }
+            strong{
+            font-size:5.5px;
+            }
+            .warning_style{
+            height:100px;float:left;width:30%;padding-top:46.66px;padding-left:5px;
+            }
+            .un_size{
+            font-size:13.33px;
+            }
+            .destination_add_2{
+            line-height:40%;
+            }
+            .company_logo{
+            height:33.33px;
+            margin: auto;
+            width:25px;
+            }
+            .cross_div_main{
+            height:100px;
+            }
+            .cross_img{
+            height:50px;
+            width:150px;
+            }
+            .warning_size{
+            font-size:6.66px;
+            }
+            .desc_text{
+            line-height:50%;
+            }
+            .prod_desc{
+            margin-bottom:5px;
+            }
+<!--            .image_wrapper{-->
+<!--            display: flex;-->
+<!--            }-->
+
+        </style>
+    </template>
+
+    <template id="custom_certification_css_60">
+        <style>
+            img{
+            height:32px;
+            margin: auto;
+            width:24px;
+            }
+            div{
+            padding:0px;
+            margin-left:0px;
+            }
+            span{
+            font-size:5.6px;
+            }
+            p{
+            font-size:5.6px;
+            }
+            strong{
+            font-size:6.6px;
+            }
+            .company_add{
+            line-height:70%;
+            }
+            .warning_style{
+            height:120px;float:left;width:30%;padding-top:56px;padding-left:6px;
+            }
+            .un_size{
+            font-size:16px;
+            }
+            .destination_add_2{
+            line-height:60%;
+            }
+            .company_logo{
+            height:40px;
+            margin: auto;
+            width:30px;
+            }
+            .cross_div_main{
+            height:120px;
+            }
+            .cross_img{
+            height:60px;
+            width:150px;
+            }
+            .warning_size{
+            font-size:8px;
+            }
+            .desc_text{
+            line-height:50%;
+            }
+            .prod_desc{
+            margin-bottom:5px;
+            }
+<!--            .image_wrapper{-->
+<!--            display: flex;-->
+<!--            }-->
+        </style>
+    </template>
+
+    <template id="custom_certification_css_70">
+        <style>
+            img{
+            height:37.36px;
+            margin: auto;
+            width:28px;
+            }
+            div{
+            padding:0px;
+            margin:0px;
+            }
+            span{
+            font-size:6.53px;
+            }
+            p{
+            font-size:6.53px;
+            }
+            strong{
+            font-size:7.7px;
+            }
+            .warning_style{
+            height:140px;float:left;width:30%;padding-top:65.33px;padding-left:7px;
+            }
+            .destination_add_2{
+            line-height:70%;
+            }
+            .un_size{
+            font-size:18.66px;
+            }
+            .company_logo{
+            height:48.66px;
+            margin: auto;
+            width:35px;
+            }
+            .cross_div_main{
+            height:140px;
+            }
+            .cross_img{
+            height:70px;
+            width:150px;
+            }
+            .warning_size{
+            font-size:9.33px;
+            }
+            .desc_text{
+            line-height:50%;
+            }
+            .prod_desc{
+            margin-bottom:5px;
+            }
+<!--            .image_wrapper{-->
+<!--            display: flex;-->
+<!--            }-->
+        </style>
+    </template>
+
+    <template id="custom_certification_css_100">
+        <style>
+            img{
+            height:53.33px;
+            margin: auto;
+            width:40px;
+            }
+            div{
+            padding:0px;
+            margin-left:0px;
+            }
+            .lot_date{
+            line-height:70%;
+            }
+            span{
+            font-size:9.33px;
+            }
+            p{
+            font-size:9.33px;
+            }
+            strong{
+            font-size:11px;
+            }
+            .warning_style{
+            height:200px;float:left;width:30%;padding-top:93.33px;padding-left:10px;
+            }
+            .un_size{
+            font-size:20px;
+            }
+            .company_logo{
+            height:66.66px;
+            margin: auto;
+            width:50px;
+            }
+            .cross_div_main{
+            height:200px;
+            }
+            .cross_img{
+            height:100px;
+            width:150px;
+            }
+            .warning_size{
+            font-size:13.33px;
+            }
+            .desc_text{
+            line-height:70%;
+            }
+            .prod_desc{
+            margin-bottom:3px;
+            }
+            .destination_add_2{
+            line-height:70%;
+            }
+            .below_img_text{
+            }
+<!--            .image_wrapper{-->
+<!--            display: flex;-->
+<!--            }-->
+<!--            .image_div{-->
+<!--            align:left;-->
+<!--            }-->
+        </style>
+    </template>
+
+    <template id="custom_certification_css_150">
+        <style>
+            img{
+            height:80px;
+            margin: auto;
+            width:60px;
+            }
+            div{
+            padding:0px;
+            margin-left:0px;
+            }
+            span{
+            font-size:14px;
+            }
+            p{
+            font-size:14px;
+            }
+            strong{
+            font-size:16.5px;
+            }
+            .warning_style{
+            height:300px;float:left;width:30%;padding-top:140px;padding-left:15px;
+            }
+            .un_size{
+            font-size:40px;
+            }
+            .company_logo{
+            height:100px;
+            margin: auto;
+            width:75px;
+            }
+            .cross_div_main{
+            height:300px;
+            }
+            .cross_img{
+            height:150px;
+            width:150px;
+            }
+            .warning_size{
+            font-size:20px;
+            }
+<!--            .image_wrapper{-->
+<!--            display: flex;-->
+<!--            }-->
+
+        </style>
+    </template>
+
+    <template id="custom_certification_css_180">
+        <style>
+            img{
+            height:96px;
+            margin: auto;
+            width:72px;
+            }
+            div{
+            padding:0px;
+            margin-left:0px;
+            }
+            span{
+            font-size:16.8px;
+            }
+            p{
+            font-size:16.8px;
+            }
+            strong{
+            font-size:19.8px;
+            }
+            .warning_style{
+            height:360px;float:left;width:30%;padding-top:168px;padding-left:18px;
+            }
+            .un_size{
+            font-size:48px;
+            }
+            .company_logo{
+            height:120px;
+            margin: auto;
+            width:90px;
+            }
+            .cross_div_main{
+            height:360px;
+            }
+            .cross_img{
+            height:180px;
+            width:150px;
+            }
+            .warning_size{
+            font-size:24px;
+            }
+<!--            .image_wrapper{-->
+<!--            display: flex;-->
+<!--            }-->
+
+        </style>
+    </template>
+</odoo>

@@ -1,0 +1,20 @@
+{
+    "name": "Lozano Report",
+    "summary": """""",
+    "description": """""",
+    "author": "Patel Akash",
+    "website": "https://www.aktivsoftware.com/",
+    "category": "sale",
+    "version": "14.0.1.0.0",
+    'license': 'LGPL-3',
+    "depends": ["base"],
+    "data": [
+        "security/ir.model.access.csv",
+        # "views/assets.xml",
+        "views/lozano_views.xml",
+        "report/lozano_report_views.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+}

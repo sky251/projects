@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="paperformat_stock_label" model="report.paperformat">
+        <field name="name">Custom label</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">50</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+    <record id="paperformat_stock_label_60" model="report.paperformat">
+        <field name="name">Custom label</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">60</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+    <record id="paperformat_stock_label_70" model="report.paperformat">
+        <field name="name">Custom label</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">70</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+    <record id="paperformat_stock_label_100" model="report.paperformat">
+        <field name="name">Custom label</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">100</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+    <record id="paperformat_stock_label_150" model="report.paperformat">
+        <field name="name">Custom label</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">150</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+    <record id="paperformat_stock_label_180" model="report.paperformat">
+        <field name="name">Custom label</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">180</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report
+            id="action_print_label"
+            string="Print Labels"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            file="stock_certification_label.report_label"
+            name="stock_certification_label.report_label"
+            menu="False"
+    />
+
+    <template id="report_label">
+        <t t-foreach="range(int(move_line.product_uom_qty))" t-as="qty">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <t t-if="label_height=='150'" t-call="stock_certification_label.custom_certification_css_150"/>
+                    <t t-if="label_height=='50'" t-call="stock_certification_label.custom_certification_css_50"/>
+                    <t t-if="label_height=='60'" t-call="stock_certification_label.custom_certification_css_60"/>
+                    <t t-if="label_height=='70'" t-call="stock_certification_label.custom_certification_css_70"/>
+                    <t t-if="label_height=='100'" t-call="stock_certification_label.custom_certification_css_100"/>
+                    <t t-if="label_height=='180'" t-call="stock_certification_label.custom_certification_css_180"/>
+                    <div class="container-fluid pt-2" style="height:100%;width:100%;"
+                         t-att-style="'height:'+label_height+'mm;'">
+
+                        <div style="float:left; height:100%;width:50%;">
+
+                            <div style="height:20%;width:100%;">
+                                <div style="float:left; height:100%;width:30%;">
+                                    <img class="company_logo" t-if="company.logo"
+                                         t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+                                </div>
+                                <div class="company_add" style="color:blue;float:right; height:100%;width:70%;">
+                                    <div t-field="company.partner_id"
+                                         t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+                                    />
+                                </div>
+                            </div>
+
+                            <div style="height:10%;width:100%;">
+                                <div style="height:10%;width:100%;margin:0px;">
+                                    <strong>Product:
+                                        <span t-field="move_line.product_id.display_name"/>
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div class="lot_date" style="height:20%;width:100%;">
+                                <div style="float:left; height:100%;width:40%;">
+                                    <span style="color:green;">Batch-1 “Packaging date” field, in customer format!
+                                    </span>
+                                    <br/>
+                                    <strong>Sale Order:
+                                        <span t-field="move_line.sale_line_id.order_id.name"/>
+                                    </strong>
+                                </div>
+                                <div style="float:right; height:100%;width:60%;">
+                                    <span style="color:green;">Batch-2 “Packaging date” + “Expiration days” of the
+                                        product in MM / YYYY
+                                        format!
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div style="height:10%;width:100%;">
+                                <div style="height:10%;width:100%;">
+                                    <t t-set="gross"
+                                       t-value="(move_line.product_uom_qty * move_line.product_id.weight) + move_line.product_packaging.packaging_type_id.tare"/>
+                                    <t t-set="net"
+                                       t-value="move_line.product_uom_qty * move_line.product_id.weight"/>
+                                    <strong>
+                                        GROSS:
+                                        <span t-esc="gross"/>
+                                        <span t-esc="move_line.product_id.weight_uom_name"/>&#160;&#160;&#160;&#160;&#160;TARE:
+                                        <span t-esc="move_line.product_packaging.packaging_type_id.tare"/>
+                                        <span t-esc="move_line.product_id.weight_uom_name"/>&#160;&#160;&#160;&#160;&#160;NET:
+                                        <span t-esc="net"/>
+                                        <span t-esc="move_line.product_id.weight_uom_name"/>
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div style="height:20%;width:100%;">
+                                <div style="float:left; height:100%;width:50%;">
+                                    <p>
+                                        <strong>Destination:</strong>
+                                        <br/>
+                                        <span t-if="address" t-esc="address"/>
+                                    </p>
+                                    <!--                                    <span t-field="picking_id.partner_id.comment"/>-->
+                                </div>
+                                <div class="destination_add_2" style="float:right; height:100%;width:50%;color:green;">
+                                    <span>Sale-2 of the header!!</span>
+                                    <br/>
+                                    <span>Picking-2 number of packages!</span>
+                                    <br/>
+                                    <span>Sale-3 of line!</span>
+                                </div>
+                            </div>
+
+                            <div style="height:10%;width:100%;">
+                                <div style="height:10%;width:95%;">
+                                    <t t-foreach="move_line.sale_line_id.certification_ids" t-as="certification_id">
+                                        <span t-field="certification_id.certification_id.text_at_bottom"
+                                        />
+                                    </t>
+                                </div>
+                            </div>
+
+                            <div style="height:10%;width:100%;">
+                                <div style="height:10%;width:100%;">
+                                    <span t-field="move_line.product_id.conservation"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex image_wrapper" style="height:10%;width:100%;">
+
+                                <t t-foreach="move_line.sale_line_id.certification_ids" t-as="certification_id">
+                                    <div class="image_div">
+                                        <img t-if="certification_id.certification_id.image"
+                                             t-att-src="image_data_uri(certification_id.certification_id.image)"/>
+                                        <t t-if="certification_id.certification_id.image and certification_id.certification_id.name == 'BIO'">
+                                            <t t-set="bio_name"
+                                               t-value="move_line.product_id.origin_agriculture_bio.replace('_', ' ').title()"/>
+                                            <p class="caption" t-esc="bio_name"/>
+                                        </t>
+                                        <!--                                            <p class="below_img_text" t-if="certification_id.certification_id.image and certification_id.certification_id.name == 'BIO'">Akash</p>-->
+                                    </div>
+                                </t>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="right_plane" style="float:right;height:100%;width:50%;">
+                            <div class="position-relative position-relative-example" style="height:60%;width:100%;">
+                                <div class="warning_style">
+                                    <strong class="warning_size">
+                                        <span class="warning_size" t-field="move_line.product_id.warning_word"/>
+                                    </strong>
+                                </div>
+
+                                <div class="cross_div_main" style="float:right;width:70%;position:relative;">
+
+
+                                    <div style="position: absolute;top: -3%;left: -3% ;">
+                                        <img t-if="len(move_line.product_id.warning_ids) >= 1" class="cross_img"
+                                             t-att-src="image_data_uri(move_line.product_id.warning_ids[0].image)"/>
+                                    </div>
+                                    <!--                                <div class="flex-container d-flex justify-content-around mt-2 mb-2"-->
+                                    <!--                                     style="text-align: center;display:inline-block;height:30%;width:100%;">-->
+                                    <div style="position: absolute; top:-3%; right:-3%;">
+                                        <img t-if="len(move_line.product_id.warning_ids) >= 2" class="cross_img"
+                                             t-att-src="image_data_uri(move_line.product_id.warning_ids[1].image)"/>
+                                    </div>
+
+                                    <div style="position: absolute;bottom:-3%;right:-3%;">
+                                        <img t-if="len(move_line.product_id.warning_ids) >= 3" class="cross_img"
+                                             t-att-src="image_data_uri(move_line.product_id.warning_ids[2].image)"/>
+                                    </div>
+
+                                    <div style="position: absolute;bottom:-3%;left:-3%;">
+                                        <img t-if="len(move_line.product_id.warning_ids) >= 4" class="cross_img"
+                                             t-att-src="image_data_uri(move_line.product_id.warning_ids[3].image)"/>
+                                    </div>
+
+                                    <div style="position: absolute;top:25%;right:24%;">
+                                        <img t-if="len(move_line.product_id.warning_ids) >= 5" class="cross_img"
+                                             t-att-src="image_data_uri(move_line.product_id.warning_ids[4].image)"/>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="pt-2" style="height:20%;width:100%;">
+                                <div style="float:left; height:100%;width:50%;">
+                                    <strong class="un_size">UN:
+                                        <span class="un_size" t-field="move_line.product_id.un_denomination"/>
+                                    </strong>
+                                </div>
+                                <div style="float:right; height:100%;width:50%;">
+                                    <strong>CAS:
+                                        <span t-field="move_line.product_id.sc_cas"/>
+                                    </strong>
+                                    <br/>
+                                    <strong>EC:
+                                        <span t-field="move_line.product_id.ec_text"/>
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div class="prod_desc" style="height:5%;width:100%;">
+                                <div style="height:100%;width:100%;">
+                                    <span t-field="move_line.product_id.name"/>
+                                </div>
+                            </div>
+
+                            <div style="height:15%;width:100%;">
+                                <div class="desc_text" style="height:100%;width:100%;">
+                                    <span t-field="move_line.product_id.hp_phrases"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

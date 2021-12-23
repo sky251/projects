@@ -1,0 +1,29 @@
+<odoo>
+    <record model="ir.ui.view" id="product_packaging_extend_form_view">
+        <field name="name">product.packaging.type.form.view</field>
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="label_height" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="product_packaging_type_extend_form_view">
+        <field name="name">product.packaging.type.extend.form.view</field>
+        <field name="model">product.packaging.type</field>
+        <field name="inherit_id" ref="product_packaging_type.view_product_packaging_type_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[last()]" position="inside">
+                <group string="Other">
+                    <field name="label"/>
+                    <field name="label_height" invisible="1"/>
+                    <label for="tare"/>
+                    <div class='o_row'>
+                        <field name="tare" class="oe_inline"/> <span>Kg</span>
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

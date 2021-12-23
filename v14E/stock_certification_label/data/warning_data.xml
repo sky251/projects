@@ -1,0 +1,18 @@
+<odoo noupdate="1">
+
+    <record model="product.warning" id="product_warning_1">
+        <field name="name">H302</field>
+        <field name="text_to_print">Harmful if swallowed.</field>
+    </record>
+
+     <record model="product.warning" id="product_warning_2">
+        <field name="name">H304</field>
+        <field name="text_to_print">May be fatal if swallowed and enters airways.</field>
+    </record>
+
+     <record model="product.warning" id="product_warning_3">
+        <field name="name">H314</field>
+        <field name="text_to_print">Causes severe skin burns and eye damage.</field>
+    </record>
+
+</odoo>

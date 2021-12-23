@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_open_so_wizard" model="ir.ui.view">
+        <field name="name">Open Sale Order Wizard</field>
+        <field name="model">open.sale.order.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Open Sale Order Report">
+                <group>
+                    <group>
+                        <field name="start_date"/>
+                        <field name="is_for_all_customers" attrs="{'invisible': [('report_for', '!=', 'partner')]}"/>
+                        <field name="is_for_all_categories" attrs="{'invisible': [('report_for', '!=', 'categ')]}"/>
+                        <field name="customer_ids" widget="many2many_tags" attrs="{'invisible': [('is_for_all_customers', '=', True)], 'required': [('is_for_all_customers', '=', False)]}"/>
+                        <field name="category_ids" widget="many2many_tags" attrs="{'invisible': [('is_for_all_categories', '=', True)], 'required': [('is_for_all_categories', '=', False)]}"/>
+                    </group>
+                    <group>
+                        <field name="end_date"/>
+                        <field name="report_for"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" context="{'report_type': 'pdf'}" string="Get Pdf Report" type="object" class="btn-primary"/>
+                    <button name="get_report" context="{'report_type': 'xlsx'}" string="Get Xlsx Report" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <act_window name="Open Sale Order Report"
+            res_model="open.sale.order.wizard"
+            view_mode="form"
+            target="new"
+            id="open_so_act_window"/>
+
+    <menuitem id="menu_open_so_report"
+    name="Open SO Report"
+    parent="sale.menu_sale_report"
+    action="ak_open_so_report.open_so_act_window"
+    sequence="5"/>
+
+</odoo>

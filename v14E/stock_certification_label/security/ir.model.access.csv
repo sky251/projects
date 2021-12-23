@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_certification,product.certification,model_product_certification,base.group_user,1,1,1,1
+access_product_warning,product.warning,model_product_warning,base.group_user,1,1,1,1
+access_certification_certification,access_certification_certification,model_certification_certification,base.group_user,1,1,1,1

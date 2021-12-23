@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_certification_tree_view">
+            <field name="name">product.certification.tree.view</field>
+            <field name="model">product.certification</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="inline_text"/>
+                    <field name="text_at_bottom"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_certification_form_view">
+            <field name="name">product.certification.from.view</field>
+            <field name="model">product.certification</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name" string="Name"/>
+                            <h1>
+                                <field name="name" placeholder="Certification Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="inline_text"/>
+                            <field name="text_at_bottom"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="product_certification_action">
+            <field name="name">Certifications</field>
+            <field name="res_model">product.certification</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Certifications" id="product_certification_menu" action="product_certification_action"
+                  parent="sale.product_menu_catalog"/>
+    </data>
+</odoo>

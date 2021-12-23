@@ -1,0 +1,19 @@
+<odoo>
+    <record model="ir.ui.view" id="res_company_certification_form_view">
+        <field name="name">res.company.certification.form.view</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook[last()]" position="inside">
+                <page string="Label Info">
+                    <group>
+                        <field name="fda_reg_nr"/>
+                        <field name="gen_cond_purchase"/>
+                        <field name="gen_cond_sale"/>
+                        <field name="custom_agent_data"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

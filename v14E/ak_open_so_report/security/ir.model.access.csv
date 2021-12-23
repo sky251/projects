@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+open_so_report,open_so_report,model_open_sale_order_wizard,,1,1,1,1
+access_report_ak_open_so_report_report_open_so_wizard_xlsx,access_report_ak_open_so_report_report_open_so_wizard_xlsx,model_report_ak_open_so_report_report_open_so_wizard_xlsx,,1,1,1,1

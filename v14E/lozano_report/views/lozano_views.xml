@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="lozano_form_views" model="ir.ui.view">
+        <field name="name">lozano.form.views</field>
+        <field name="model">lozano.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+
+                        <field name="name"/>
+                    </group>
+                </group>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="lozano_tree_views" model="ir.ui.view">
+        <field name="name">lozano.tree.views</field>
+        <field name="model">lozano.report</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_lozano_views" model="ir.actions.act_window">
+        <field name="name">lozano report</field>
+        <field name="res_model">lozano.report</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="lozano_root_menu" name="Lozano Report"/>
+    <menuitem name="Report" id="lozano_report_menu" action="action_lozano_views" parent="lozano_root_menu"/>
+</odoo>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="report_open_so_wizard_template">
+            <div class="page">
+                <div class="oe_structure"/>
+                <div class="float-left">
+                    <b>Start Date :</b>
+                    <t t-esc="start_date"/>
+                </div>
+                <div class="float-right">
+                    <b>End Date :</b>
+                    <t t-esc="end_date"/>
+                </div>
+                <br/>
+                <h2 class="mt16">
+                    <center>Open Sale Order Report</center>
+                </h2>
+                <br/>
+                <br/>
+                <t t-if="report_for == 'partner'">
+                    <t t-as="doc" t-foreach="docs">
+                        <t t-if="doc.has_picking">
+                            <div class="container" style="font-size:13px;">
+                                <b>Customer Name :
+                                    <t t-esc="doc.name"/>
+                                </b>
+                            </div>
+                            <t t-set="s_no" t-value="1"/>
+                            <table class="table table-sm table-reports">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align:20px;">Sr. No.</th>
+                                        <th style="text-align:20px;">Order Date</th>
+                                        <th style="text-align:20px;">Expected Delivery Date</th>
+                                        <th style="text-align:20px;">Product</th>
+                                        <th style="text-align:20px;">Sale Order</th>
+                                        <th style="text-align:20px;">Product Category</th>
+                                        <th style="text-align:20px;">Demand Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-as="picking" t-foreach="picking_ids">
+                                        <t t-as="line"
+                                           t-foreach="picking.filtered(lambda x:x.partner_id == doc).move_ids_without_package">
+                                            <tr>
+                                                <td>
+                                                    <t t-esc="s_no"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.picking_id.sale_id.date_order.strftime('%Y-%m-%d')"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.picking_id.sale_id.expected_date.strftime('%Y-%m-%d')"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.product_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.picking_id.sale_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.product_id.categ_id.display_name"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="line.product_uom_qty"/>
+                                                </td>
+                                            </tr>
+                                            <t t-set="s_no" t-value="s_no+1"/>
+                                        </t>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                    </t>
+                </t>
+                <t t-else="">
+                    <t t-as="doc" t-foreach="categories">
+                        <div class="container" style="font-size:13px;">
+
+                            <b>Product Category :
+                                <t t-esc="doc.display_name"/>
+                            </b>
+                        </div>
+                        <t t-set="s_no" t-value="1"/>
+                        <table class="table table-sm table-reports">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:20px;">Sr. No.</th>
+                                    <th style="text-align:20px;">Order Date</th>
+                                    <th style="text-align:20px;">Expected Delivery Date</th>
+                                    <th style="text-align:20px;">Product</th>
+                                    <th style="text-align:20px;">Partner</th>
+                                    <th style="text-align:20px;">Sale Order</th>
+                                    <th style="text-align:20px;">Demand Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-as="picking" t-foreach="picking_ids">
+                                    <t t-as="line"
+                                       t-foreach="picking.move_ids_without_package.filtered(lambda x:x.product_id.categ_id == doc)">
+                                        <tr>
+                                            <td>
+                                                <t t-esc="s_no"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="picking.sale_id.date_order.strftime('%Y-%m-%d')"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="picking.sale_id.expected_date.strftime('%Y-%m-%d')"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.product_id.name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="picking.partner_id.name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="picking.sale_id.name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.product_uom_qty"/>
+                                            </td>
+                                        </tr>
+                                        <t t-set="s_no" t-value="s_no+1"/>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </t>
+                </t>
+            </div>
+        </template>
+        <template id="report_open_so_wizard">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-call="ak_open_so_report.report_open_so_wizard_template"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
