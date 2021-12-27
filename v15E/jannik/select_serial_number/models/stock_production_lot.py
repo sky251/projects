@@ -61,3 +61,5 @@ class StockMove(models.Model):
 
     lot_id = fields.Many2one('stock.production.lot',
                              string="Lot/Serial Number")
+
+
