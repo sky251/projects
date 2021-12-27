@@ -18,8 +18,6 @@ class OpenSaleOrderXlsx(models.TransientModel):
         partners = self.env['res.partner'].browse(data.get('customer_ids'))
         start_date = datetime.strptime(data.get('start_date'), "%Y-%m-%d %H:%M:%S")
         end_date = datetime.strptime(data.get('end_date'), "%Y-%m-%d %H:%M:%S")
-        print("\n\n\n\nStart Date:--- >>>:", start_date, type(start_date))
-
         picking_ids = self.env['stock.picking'].search([('sale_id', '!=', False),
                                                         ('partner_id', 'in', partners.ids),
                                                         ('state', 'not in', ['done', 'cancelled']),

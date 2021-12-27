@@ -9,6 +9,7 @@
 #           Aktiv Software:
 #              - Monali Parekh
 #              - Shivam Kachhia
+#              - Akash Patel
 #              - Saurabh Yadav
 #              - Tanvi Gajera
 

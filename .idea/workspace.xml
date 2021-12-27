@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a5ec687-47e6-499d-aec3-af0e2ed0236d" name="Changes" comment="" />
+    <list default="true" id="8a5ec687-47e6-499d-aec3-af0e2ed0236d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/ak_open_so_report/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/open_sale_order_xlsx.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/open_sale_order_xlsx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/partner_pdf_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/partner_xlsx_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/prod_categ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/prod_catg_pdf_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/prod_catg_xlsx_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/wizard_pop_up.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
