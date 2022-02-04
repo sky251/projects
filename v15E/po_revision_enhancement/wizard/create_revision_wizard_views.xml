@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- wizard view -->
+    <record id="create_revision_wizard_view" model="ir.ui.view">
+        <field name="name">description.create.revision.wizard</field>
+        <field name="model">create.revision.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Description Of Change">
+                <group>
+                    <field name="description_of_change"/>
+                </group>
+                <footer>
+                    <button string="Create Revised PO" class="btn-primary" type="object" name="create_purchase_order"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

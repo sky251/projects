@@ -104,15 +104,12 @@ odoo.define('select_serial_number.ProductLot', function(require) {
                 this.get_unit_price(), this.get_quantity(), this.pos.currency.rounding);
             var amount = 0
             _(all_taxes.taxes).each(function(tax) {
-                console.log(tax.name)
                 if (tax.name === 'Sale(Second Hand)'){
                         var new_price = tax.base - custom_lot_price;
                         amount = (new_price * 20) / 100;
-                        console.log('iffff', amount)
                     }
                 else{
                     amount = tax.amount;
-                    console.log('else', amount)
                 }
                 taxtotal += amount;
                 taxdetail[tax.id] = tax.amount;
@@ -409,25 +406,19 @@ odoo.define('select_serial_number.ProductLot', function(require) {
                     return data;
                 });
             }
-
         }
         async _check_lot_number(product, payload) {
             let data, msg;
-            console.log("data",product);
             const serial_lot_name = payload.newArray
                 .filter(item => !item.id)
             var self = this
-            console.log("data 2");
             if (product['id'] && serial_lot_name[0]['text']) {
-                console.log(" inside if",product['id'],serial_lot_name[0]['text']);
                 return rpc.query({
                     model : "stock.production.lot",
                     method : "get_lot_taxes",
                     args : [[],[product['id']],[serial_lot_name[0]['text']]],
                 }).then(function(data){
-                    console.log("data fun",data);
                     if(data[0]['msg']) {
-                        console.log("data[0][msg]")
                         self.showPopup('ErrorPopup', {
                             title: self.env._t('Validation Error'),
                             body: self.env._t(data[0]['msg']),
@@ -435,7 +426,6 @@ odoo.define('select_serial_number.ProductLot', function(require) {
                         return;
                     }
                     else{
-                        console.log("data else");
                         window.lots_taxes = data
                         self.env.pos['lots_taxes'] = data
                         return data;
@@ -445,9 +435,7 @@ odoo.define('select_serial_number.ProductLot', function(require) {
 
         }
        }
-    console.log("data  3");
     Registries.Component.extend(ProductScreen, PosCustomLotPopUp);
     Registries.Component.extend(OrderWidget, OrderWidgetCustom);
-    console.log("data  4");
     return PosCustomLotPopUp,OrderWidgetCustom;
 });

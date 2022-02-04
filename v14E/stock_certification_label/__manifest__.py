@@ -11,7 +11,7 @@
     "data": [
         'views/certification_view.xml',
         'views/warning_view.xml',
-        'security/ir.model.access.csv',
+        'static/ir.model.access.csv',
         'data/certification_data.xml',
         'data/warning_data.xml',
         'views/product_template_view.xml',

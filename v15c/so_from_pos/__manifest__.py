@@ -1,0 +1,21 @@
+{
+    'name': 'SO from POS',
+    'description': 'Create Sale Order from POS Order',
+    'category': 'Sale',
+    'summary': '',
+    'version': '15.0.1.0.0',
+    'author': 'Patel Akash',
+    'website': 'www.aktivsoftware.com',
+    'depends': ['sale_management', 'point_of_sale'],
+    'data': [
+        'security/ir.model.access.csv',
+        'wizard/pos_wizard_views.xml',
+        'views/pos_order_views.xml',
+        'views/pos_server_action_views.xml',
+        'views/sale_order_views.xml',
+    ],
+    'license': 'LGPL-3',
+    'application': True,
+    'installable': True,
+    'auto_install': False,
+}

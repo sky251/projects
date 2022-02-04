@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- wizard view -->
+    <record id="update_sale_order_line_wizard_view" model="ir.ui.view">
+        <field name="name">update.sale.order.line.wizard</field>
+        <field name="model">sale.order.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update SO line">
+                <field name="product_ids"/>
+                <footer>
+                    <button string="Update" class="btn-primary" type="object" name="update_selected_so"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

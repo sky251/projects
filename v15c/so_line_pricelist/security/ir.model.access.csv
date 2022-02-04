@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+so_line_pricelist.access_pricelist_wizard,access_pricelist_wizard,so_line_pricelist.model_pricelist_wizard,,1,1,1,1

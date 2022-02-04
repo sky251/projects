@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- wizard view -->
+    <record id="select_pricelist_wizard_view" model="ir.ui.view">
+        <field name="name">Select Pricelist</field>
+        <field name="model">pricelist.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select Pricelist">
+                <group>
+                    <field name="pricelist_id"/>
+                </group>
+                <footer>
+                    <button string="Update" class="btn-primary" type="object" name="update_line_price_unit" />
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,21 @@
+{
+    "name": "Add Products in SO and PO line",
+    "description": "This module is for add products in So and PO",
+    "category": "Sale & Purchase",
+    "summary": "",
+    "version": "15.0.1.0.0",
+    "author": "Aktiv Software",
+    "website": "www.aktivsoftware.com",
+    "depends": ["sale_management", "purchase"],
+    "data": [
+        "security/ir.model.access.csv",
+        "wizard/so_wizard_views.xml",
+        "wizard/po_wizard_views.xml",
+        "views/sale_order_server_action_views.xml",
+        "views/purchase_order_server_action_views.xml",
+    ],
+    "license": "LGPL-3",
+    "application": True,
+    "installable": True,
+    "auto_install": False,
+}

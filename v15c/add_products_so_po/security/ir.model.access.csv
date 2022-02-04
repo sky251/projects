@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+add_products_so_po.access_sale_order_wizard,access_sale_order_wizard,add_products_so_po.model_sale_order_wizard,base.group_user,1,1,1,1
+add_products_so_po.access_purchase_order_wizard,access_purchase_order_wizard,add_products_so_po.model_purchase_order_wizard,base.group_user,1,1,1,1

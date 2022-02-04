@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sale_order_server_action_views" model="ir.actions.server">
+        <field name="name">Select Product</field>
+        <field name="model_id" ref="add_products_so_po.model_sale_order_wizard"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_wizard()</field>
+    </record>
+</odoo>

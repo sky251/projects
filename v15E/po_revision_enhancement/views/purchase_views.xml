@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_inherit_revision_history" model="ir.ui.view">
+        <field name="name">purchase.order.form.revision.history</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header/field[@name='state']" position="replace">
+                <field name="state" widget="statusbar" statusbar_visible="draft,sent,approve,purchase" readonly="1"/>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button name="button_approve_action"
+                        string="Approve" states="draft,sent" class="oe_highlight" type="object"
+                        attrs="{'invisible': [('state','in',['approve']),('revised_po','=',True)]}"/>
+            </xpath>
+
+            <xpath expr="//header/button[@id='draft_confirm']" position="attributes">
+                <attribute name="states">approve,draft</attribute>
+            </xpath>
+
+            <xpath expr="//header/button[@name='button_cancel']" position="attributes">
+                <attribute name="states">draft,approve, to approve,sent,purchase</attribute>
+            </xpath>
+
+            <!--            <xpath expr="//header/button[@name='action_rfq_send']" position="attributes">-->
+            <!--                <attribute name="states">approve</attribute>-->
+            <!--            </xpath>-->
+            <!--            -->
+            <!--            <xpath expr="//header/button[@name='action_rfq_send']" position="attributes">-->
+            <!--                <attribute name="states">approve</attribute>-->
+            <!--            </xpath>-->
+
+
+            <xpath expr="//header/button[@name='action_view_picking']" position="after">
+                <button name="%(action_create_revision_wizard)d"
+                        string="Create Revision" class="oe_highlight" type="action"
+                        attrs="{'invisible': ['|',('state','not in', ('purchase','done')),('revised_po','=',True)]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="revised_po" attrs="{'invisible': [('revised_po', '=', False)]}"/>
+                <field name="po_id" attrs="{'invisible': [('revised_po', '=', False)]}"/>
+                <field name="approved" attrs="{'invisible': [('revised_po', '=', False)]}"/>
+                <field name="rfq_approver_id" attrs="{'invisible': [('revised_po', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='date_approve']" position="after">
+                <group>
+                    <field name="from_apporoval_datetime" attrs="{'invisible': [('revised_po', '=', False)]}"/>
+                    <field name="to_apporoval_datetime" attrs="{'invisible': [('revised_po', '=', False)]}"/>
+                    <field name="last_rev_id" invisible="1"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Revision History">
+                    <field name="revision_ids">
+                        <tree>
+                            <field name="revision_level"/>
+                            <field name="desc_of_change"/>
+                            <field name="revision_date"/>
+                            <field name="approval_stamp_id"/>
+                            <field name="revision_purchase_name"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="revision_level"/>
+                                <field name="desc_of_change"/>
+                                <field name="revision_date"/>
+                                <field name="approval_stamp_id"/>
+                                <field name="revision_purchase_name"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="to_approve_po_action" model="ir.actions.act_window">
+        <field name="name">To Approve PO</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_to_approve_po" name="To Approve PO"
+              parent="purchase.menu_procurement_management"
+              action="to_approve_po_server_action"
+              sequence="7"/>
+</odoo>

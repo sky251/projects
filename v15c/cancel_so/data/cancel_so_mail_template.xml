@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+        <!--Email template -->
+        <record id="cancel_so_mail_template" model="mail.template">
+            <field name="name">Cancel SO Mail</field>
+            <field name="model_id" ref="cancel_so.model_sale_order"/>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ (object.company_id.email or user.email) }}&gt;</field>
+            <field name="subject">Canceled Sale Order.</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; border:1px solid black;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Hello <t t-out="object.partner_id.name"/>,
+                        <br/>
+                        <br/>
+                        Your Sale Order <strong t-out="object.name"/> has been cancelled.
+                        <br/>
+                        <br/>
+                        Regards,
+                        <br/>
+                        <strong t-out="user.partner_id.name"/>
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

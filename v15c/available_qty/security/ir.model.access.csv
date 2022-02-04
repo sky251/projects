@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+available_qty.access_available_quantity,access_available_quantity,available_qty.model_available_quantity,base.group_user,1,1,1,1

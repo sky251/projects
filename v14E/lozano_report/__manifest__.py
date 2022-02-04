@@ -9,7 +9,7 @@
     'license': 'LGPL-3',
     "depends": ["base"],
     "data": [
-        "security/ir.model.access.csv",
+        "static/ir.model.access.csv",
         # "views/assets.xml",
         "views/lozano_views.xml",
         "report/lozano_report_views.xml",

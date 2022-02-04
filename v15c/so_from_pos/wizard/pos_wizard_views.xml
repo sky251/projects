@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- wizard view -->
+    <record id="updated_customer_wizard_view" model="ir.ui.view">
+        <field name="name">Grant portal access</field>
+        <field name="model">pos.order.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Updated Customer">
+                <group>
+                    <field name="partner_id"/>
+                </group>
+                <footer>
+                    <button string="Update" class="btn-primary" type="object" name="update_selected_pos" />
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

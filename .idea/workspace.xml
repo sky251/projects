@@ -2,31 +2,164 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a5ec687-47e6-499d-aec3-af0e2ed0236d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/models/image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/models/sale_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/image_preview_so/views/sale_order_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/po_revision_enhancement/data/revision_history_sequence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/po_revision_enhancement/data/rfq_approver_mail_template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/po_revision_enhancement/views/to_approve_po_menuitem.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/po_revision_enhancement/views/to_approve_po_server_action_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15E/search_by_lot_and_serial_no/models/stock_production_lot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/views/purchase_order_server_action_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/views/sale_order_server_action_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/wizard/po_wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/wizard/po_wizard_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/add_products_so_po/wizard/so_wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/models/available_quantity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/models/product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/available_qty/views/product_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/cancel_so/data/cancel_so_mail_template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/cancel_so/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/cancel_so/models/sale_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/models/pos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/models/sale_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/views/pos_order_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/views/pos_server_action_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/views/sale_order_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_from_pos/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_line_pricelist/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_line_pricelist/views/sale_order_line_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_line_pricelist/wizard/pricelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v15c/so_line_pricelist/wizard/select_pricelist_wizard_views.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/ak_open_so_report/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/open_sale_order_xlsx.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/open_sale_order_xlsx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/partner_pdf_report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/partner_xlsx_report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/prod_categ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/prod_catg_pdf_report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/prod_catg_xlsx_report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/wizard_pop_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/models/res_partner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/open_sale_order_xlsx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/open_so_report_template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/reports.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/reports/sale_details_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/aktiv-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/partners_pdf_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/partners_xlsx_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/product_categ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/product_catg_pdf_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/product_catg_xlsx_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/index_imgs/wiz_pop_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/invoice_report_group_by.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/outstanding_invoice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/partners_pdf_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/partners_xlsx_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/pos_event.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/pos_guest_selection.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/product_categ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/product_catg_pdf_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/product_catg_xlsx_report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/restaurant_customization_banner.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/tender_management.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/static/description/wiz_pop_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/views/res_partner_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/wizards/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/wizards/open_sale_order_wizard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/ak_open_so_report/wizards/open_sale_order_wizard_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/lozano_report/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/lozano_report/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/product_packaging_type/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/product_packaging_type/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/controllers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/controllers/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/demo/report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/de.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/es.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/fr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/hr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/hr_HR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/it.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/nl_NL.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/pt.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/pt_PT.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/report_xlsx.pot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/sv.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/i18n/tr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/models/ir_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/readme/CONTRIBUTORS.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/readme/DESCRIPTION.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/readme/INSTALL.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/readme/USAGE.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/report/report_abstract_xlsx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/report/report_partner_xlsx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/static/description/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/static/src/js/report/action_manager_report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/tests/test_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/report_xlsx/views/webclient_templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v14E/stock_certification_label/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/v14E/stock_certification_label/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v15E/jannik/select_serial_number/models/stock_production_lot.py" beforeDir="false" afterPath="$PROJECT_DIR$/v15E/jannik/select_serial_number/models/stock_production_lot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v15E/jannik/select_serial_number/static/src/js/ProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v15E/jannik/select_serial_number/static/src/js/ProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v15E/search_by_lot_and_serial_no/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/v15E/search_by_lot_and_serial_no/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v15E/search_by_lot_and_serial_no/static/src/js/ProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v15E/search_by_lot_and_serial_no/static/src/js/ProductScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22d1OjX7QHrdEf1qwzZNlLMYkFQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -37,7 +170,30 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -49,5 +205,27 @@
       <updated>1640152622277</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
