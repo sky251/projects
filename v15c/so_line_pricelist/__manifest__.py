@@ -1,5 +1,5 @@
 {
-    'name': 'Sale order Pricelist',
+    'name': 'Sale Order Line Pricelist',
     'description': ' This module is for apply different pricelist for different product on sale order',
     'category': 'Sale',
     'summary': '',
